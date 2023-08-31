@@ -41,15 +41,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 :root {
   --header-height: 3.5rem;
-  --first-color: hsl(273, 97%, 66%);
-  --first-color-shape: hsl(253, 33%, 32%);
-  --title-color: hsl(273, 8%, 15%);
-  --text-color: hsl(273, 4%, 45%);
-  --body-color: hsl(273, 100%, 99%);
-  --container-color: #fff;
-  --title-color-dark: hsl(273, 83%, 98%);
-  --text-color-dark: hsl(273, 21%, 56%);
-  --container-color-dark: hsl(273, 80%, 14%);
+  --first-color: #20afa7;
+  --first-color-shape: #20afa7;
+  --title-color: black;
+  --text-color: black;
+  --body-color:hsl(273, 100%, 99%);
+  --container-color: #000;
+  --title-color-dark: white;
+  --text-color-dark: white;
+  --container-color-dark: #20afa7;
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 1.5rem;
   --normal-font-size: .938rem;
@@ -84,12 +84,16 @@ body {
 }
 
 h1, h2, h3, h5 {
+  position: relative;
   color: var(--title-color);
   text-align: center;
+  z-index: 2;
 }
 h4 {
+  position: relative;
   color: var(--title-color);
   text-align: left;
+  z-index: 2;
 }
 
 ul {
@@ -230,7 +234,54 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
+.lapisan_header__nav {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(160deg, #20afa7 40%, #ff000000 0);
+  background-size: 100%;
+}
+.lapisan_header__nav1 {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(199deg, #20afa7 40%, #ff000000 0);
+  background-size: 100%;
+}
+.lapisan_header__nav2 {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(140deg, #20afa7 50%, #ff000000 0);
+  background-size: 100%;
+}
+.lapisan_header__nav3 {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(195deg, #20afa7 50%, #ff000000 0);
+  background-size: 100%;
+}
+.lapisan_header__nav4 {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(200deg, #20afa7 60%, #ff000000 0);
+  background-size: 100%;
+}
+.lapisan_header__nav5 {
+  position:absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #20afa7 70%, #ff000000 0);
+  background-size: 100%;
+}
 .header__logo, .header__toggle {
   color: white;
 }
@@ -244,22 +295,28 @@ img {
   cursor: pointer;
 }
 .img_abouts {
+  position: relative;
+  z-index: 2;
   margin-left:30px;
   padding:5px;
-  background: linear-gradient(224deg, #a22fe9 -2%, #ddaafe 97%);
+  background: linear-gradient(224deg, #20afa7 -2%, #ddaafe 97%);
   border-radius:50%;
   margin-bottom:20px;
   }
 .img_pendidikan {
+  position: relative;
   padding:3px;
-  background: linear-gradient(224deg, #a22fe9 -2%, #ddaafe 97%);
+  background: linear-gradient(224deg, #20afa7 -2%, #ddaafe 97%);
   border-radius:8px;
+  z-index: 2;
   }
 .profile__social {
   display: flex;
+  position: relative;
   justify-content: center;
   column-gap: .75rem;
   margin-top: 10px;
+  z-index: 2;
 }
 
 .profile__social-link {
@@ -299,18 +356,24 @@ img {
 }
 
 .skills__data i {
+  position: relative;
   font-size: 1rem;
-  color: var(--first-color);
+  color: black;
+  z-index: 2;
 }
 
 .skills__name {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .skills__level {
+  position:relative;
   font-size: 12px;
+  z-index: 2;
 }
 /* Show menu */
 .show-menu {
@@ -438,7 +501,7 @@ img {
                     </div>
                 </nav>
             </header>
-
+            <div class="lapisan_header__nav"></div>
 
             <!--=============== About ===============-->
             <section class="section section__height container" id="about"><br>
@@ -461,7 +524,7 @@ img {
                             <i style="color:#1777F2;"class="ri-facebook-box-line"></i>
                         </a>
                     </ul>
-              <div class="box_about" style="font-size:12px;margin-top:30px;font-weight:500;color:var(--title-color);display:flex;gap:25px;">
+              <div class="box_about" style="position:relative;z-index:2;font-size:12px;margin-top:30px;font-weight:500;color:var(--title-color);display:flex;gap:25px;">
                <p>Usia : 24 Tahun</p>
                <p>Pengalaman : 4 Th</p>
                <p>Education : S1</p>
@@ -470,7 +533,8 @@ img {
             </section>
 
             <!--=============== Experiences===============-->
-            <section style="height:80vh"class="section section__height container" id="experiens">
+            <div class="lapisan_header__nav1"></div>
+            <section class="section section__height container" id="experiens">
                 <h3>Experiences</h3>
                 <h5>4 Tahun Pengalaman membangun Web dan App, adapun yang dapat saya buat sebagai berikut:</h5><br>
                 <div class="skills__box">
@@ -497,6 +561,7 @@ img {
             </section>
 
             <!--=============== Education===============-->
+            <div class="lapisan_header__nav2"></div>
             <section class="section section__height container" id="education">
                 <h3>Education</h3>
                 <h5>Pendidikan terakhir S1 di Unwir dengan mengambil Ilmu Komputer lulus dengan hasil memuaskan dengan predikat A</h5><br>
@@ -506,7 +571,8 @@ img {
             </section>
 
             <!--=============== SKILLS ===============-->
-            <section style="height:80vh"class="section section__height container" id="skills">
+            <div class="lapisan_header__nav3"></div>
+            <section class="section section__height container" id="skills">
                 <h3>SKILLS</h3>
                 <h5>Adapun skills coding yang saya kuasai adalah sebagai berikut</h5><br>
                         <div class="skills__area">
@@ -591,15 +657,17 @@ img {
             </section>
 
             <!--=============== Interests===============-->
+            <div class="lapisan_header__nav4"></div>
             <section class="section section__height container" id="Interests">
                 <h3>Interests</h3>
                 <h5>Membangun layouting untuk web dan App Anda, adapun beberapa contoh yang pernah saya buat sebagai berikut: </h5><br>
                 <img class="img_pendidikan" src="https://i.postimg.cc/W4vBJBwf/Picsart-23-06-02-10-10-59-981.jpgg" alt="img" width="100%" height="250"><br>
                 <img class="img_pendidikan" src="https://i.postimg.cc/7h3sD6pH/Picsart-23-05-29-08-01-52-119.jpg" alt="img" width="100%" height="250">
-            </section>
+            </section><br><br>
             
             <!--=============== Award===============-->
-            <section style="margin-top:50px;height:90vh" class="section section__height container" id="award">
+            <div class="lapisan_header__nav5"></div>
+            <section class="section section__height container" id="award">
                 <h3>Award</h3>
                 <h5>Website ini adalah hasil dari pelatihan hacktiv8 dan akan saya hadiahkan untuk akhir atau finising project pelatihan sesi 8.</h5>
                 <h5>Saya pribadi ingin mengucapkan beribu-ribu terimakasih atas ilmu yang di berikan oleh time hacktiv8, khususnya pak materi <b>Rizki Cahyan</b>.</h5>
